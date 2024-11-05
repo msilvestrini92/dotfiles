@@ -16,6 +16,6 @@ y = 0
 
 [general]
 # theme from catpuccin https://github.com/catppuccin/alacritty
-import = ["~/.conFig/alacritty/themes/themes/dracula_plus.toml"]
+import = ["~/.config/alacritty/themes/themes/dracula_plus.toml"]
 
 [terminal]
