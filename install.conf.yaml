@@ -1,9 +1,26 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
 - clean: ['~']
 
+- shell: 
+  - ["mkdir -p ~/.config", "Creating config folder"]
+
 - link:
-    ~/.gitconfig: gitconfig
-    ~/.tmux.conf: tmux.conf
-    ~/.vimrc: vimrc
-    ~/.bashrc: bashrc
-    ~/.bash_profile: bash_profile
+    ~/.gitconfig: git/gitconfig
+
+    ~/.tmux.conf: tmux/tmux.conf
+
+    ~/.vimrc: vim/vimrc
+
+    ~/.bashrc: 
+      path: bash/bashrc
+      force: true
+
+    ~/.bash_profile: 
+      path: bash/bash_profile
+      force: true
+
     ~/.config/alacritty: alacritty
