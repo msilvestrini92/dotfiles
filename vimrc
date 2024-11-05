@@ -33,7 +33,6 @@ set hlsearch
 set incsearch
 set title
 
-set cursorline
 set mouse=n
 
 " change the mapleader from \ to ,
@@ -42,7 +41,7 @@ nmap <silent> ,/ :nohlsearch<CR>
 
 let g:netrw_liststyle=3
 
-colorscheme retrobox
+colorscheme default
 
 " use ,F to jump to tag in a vertical split
 nnoremap ,F :let word=expand(""):vsp:wincmd w:exec("tag ". word)<CR>
