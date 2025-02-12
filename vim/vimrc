@@ -41,7 +41,7 @@ nmap <silent> ,/ :nohlsearch<CR>
 
 let g:netrw_liststyle=3
 
-colorscheme default
+colorscheme desert
 
 " use ,F to jump to tag in a vertical split
 nnoremap ,F :let word=expand(""):vsp:wincmd w:exec("tag ". word)<CR>

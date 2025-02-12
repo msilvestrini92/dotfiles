@@ -17,7 +17,6 @@ export VISUAL=vim
 export EDITOR=vim
 
 # directories
-export REPOS="$HOME/repos"
 export GITUSER="msilvestrini92"
 export DOTFILES="$HOME/.dotfiles"
 
@@ -32,9 +31,14 @@ export OKTA_AWSCLI_OPEN_BROWSER=true
 # aws-cli auto-completion
 complete -C '/usr/local/bin/aws_completer' aws
 
+# bk auto-completion
+source <(bk completion bash)
+
 # ~~~~~~~~~~~~~~~ Path configuration ~~~~~~~~~~~~~~~~~~~~~~~~
 
-export PATH="/usr/local/bin/:$PATH"
+#export PATH="/usr/local/bin/:$PATH"
+export PATH="/usr/local/bin:$PATH"    # arm64e homebrew path (m1   )
+export PATH="/opt/homebrew/bin:$PATH" # x86_64 homebrew path (intel)
 
 # ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -49,9 +53,17 @@ export HISTCONTROL=ignorespace
 alias ls='ls --color=auto'
 alias ll='ls -la'
 alias la='ls -lathr'
+alias sed='gsed'
 
 # finds all files recursively and sorts by last modification, ignore hidden files
 alias lastmod='find . -type f -not -path "*/\.*" -exec ls -lrt {} +'
 
 # BKNG netshell
 alias netshell='ssh netshell.network.booking.com'
+
+# Brew aliases
+alias mbrew="arch -arm64e /opt/homebrew/bin/brew" # arm64e homebrew path (m1   )
+alias ibrew="arch -x86_64 /usr/local/bin/brew"    # x86_64 homebrew path (intel)
+
+# Python3
+alias python="python3"

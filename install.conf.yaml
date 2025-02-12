@@ -2,25 +2,18 @@
     link:
       relink: true
       create: true
+      relative: true
+      force: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
 
 - clean: ['~']
 
-- shell: 
-  - ["mkdir -p ~/.config", "Creating config folder"]
-
 - link:
     ~/.gitconfig: git/gitconfig
-
     ~/.tmux.conf: tmux/tmux.conf
-
     ~/.vimrc: vim/vimrc
-
-    ~/.bashrc: 
-      path: bash/bashrc
-      force: true
-
-    ~/.bash_profile: 
-      path: bash/bash_profile
-      force: true
-
-    ~/.config/alacritty: alacritty
+    ~/.bashrc: bash/bashrc
+    ~/.bash_profile: bash/bash_profile
